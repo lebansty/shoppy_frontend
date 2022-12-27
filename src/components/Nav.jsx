@@ -13,7 +13,7 @@ function Nav() {
 let cartLength =context.cart.length
 let loadData=async()=>{
 try {
-  let validation = await axios.get("http://localhost:3001/user-identify",{
+  let validation = await axios.get("https://fullstcack-project-4-shoppy-backend.vercel.app/user-identify",{
     headers:{
       "id":window.localStorage.getItem("userid")
     }

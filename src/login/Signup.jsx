@@ -29,7 +29,7 @@ return errors
     onSubmit:async(values,{resetForm})=>{
 try {
 delete values.confirmPass
-let signUp = await axios.post('http://localhost:3001/signup',values)
+let signUp = await axios.post('https://fullstcack-project-4-shoppy-backend.vercel.app/signup',values)
 alert(`${signUp.data.messege}`)
   resetForm({values:''});
 } catch (error) {

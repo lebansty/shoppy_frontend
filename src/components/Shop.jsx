@@ -14,7 +14,7 @@ function Shop() {
  const inputRef =useRef(null);
  let loadData =async()=>{
 try {
-    let getProductData = await axios.get("http://localhost:3001/product-display")
+    let getProductData = await axios.get("https://fullstcack-project-4-shoppy-backend.vercel.app/product-display")
    
     setProducts(getProductData.data.products)
 } catch (error) {
@@ -27,7 +27,7 @@ loadData()
 
  let loadCart =async()=>{
     try {
-      let cartData =await axios.get('http://localhost:3001/get-cartDet',{
+      let cartData =await axios.get('https://fullstcack-project-4-shoppy-backend.vercel.app/get-cartDet',{
         headers:{
           userid:window.localStorage.getItem('userid'),
           auth:window.localStorage.getItem('app-token')
@@ -51,7 +51,7 @@ loadData()
    let token=window.localStorage.getItem('app-token')
     try {
   if(token){
-  let addToCart=  await axios.post('http://localhost:3001/addToCart',pics,{
+  let addToCart=  await axios.post('https://fullstcack-project-4-shoppy-backend.vercel.app/addToCart',pics,{
         headers:{
             userid:window.localStorage.getItem('userid'),
             auth:window.localStorage.getItem('app-token')

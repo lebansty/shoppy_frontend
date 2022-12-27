@@ -25,7 +25,7 @@ return errors
         },
         onSubmit:async(values)=>{
 try {
-    let updatedProduct = await axios.put(`http://localhost:3001/product-update/${param.proid}`,values,{
+    let updatedProduct = await axios.put(`https://fullstcack-project-4-shoppy-backend.vercel.app/product-update/${param.proid}`,values,{
       headers:{
         "auth":window.localStorage.getItem('app-token')
       }
@@ -39,7 +39,7 @@ try {
     }))
     let loadData =async()=>{
 try {
-    let getOp = await axios.get(`http://localhost:3001/producton-id/${param.proid}`,{
+    let getOp = await axios.get(`https://fullstcack-project-4-shoppy-backend.vercel.app/producton-id/${param.proid}`,{
       headers:{
         "auth":window.localStorage.getItem('app-token')
       }

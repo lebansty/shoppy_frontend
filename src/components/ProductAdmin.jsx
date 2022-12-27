@@ -8,7 +8,7 @@ function ProductAdmin() {
   const [tableProduct,setTableProduct] =useState([])
   let loadData=async()=>{
 try {
-  let adminProduct =await axios.get('http://localhost:3001/admin-products',{
+  let adminProduct =await axios.get('https://fullstcack-project-4-shoppy-backend.vercel.app/admin-products',{
     headers:{
       adminId:"639c1e79dd7f5c025cc5a2c5",
       "auth":window.localStorage.getItem('app-token')
@@ -44,7 +44,7 @@ return errors
     },
     onSubmit:async(values,{resetForm})=>{
 try {
-   await axios.post('http://localhost:3001/product-update',values,{
+   await axios.post('https://fullstcack-project-4-shoppy-backend.vercel.app/product-update',values,{
     headers:{
       adminId:window.localStorage.getItem("userId"),
       auth:window.localStorage.getItem('app-token')
@@ -60,7 +60,7 @@ resetForm({values:''})
   let removeProduct =async(itemId)=>{
 try {
 if(window.confirm('Are you sure you want to remove this product ?')){
-  let res= await axios.delete(`http://localhost:3001/remove-product/${itemId}`,{
+  let res= await axios.delete(`https://fullstcack-project-4-shoppy-backend.vercel.app/remove-product/${itemId}`,{
   headers:{
     auth:window.localStorage.getItem('app-token')
   }

@@ -9,7 +9,7 @@ function Cart() {
 
   let loadData=async()=>{
 try {
-  let cartData =await axios.get('http://localhost:3001/get-cartDet',{
+  let cartData =await axios.get('https://fullstcack-project-4-shoppy-backend.vercel.app/get-cartDet',{
     headers:{
       userid:window.localStorage.getItem('userid')
     }
@@ -39,7 +39,7 @@ loadData()
     console.log(id)
     console.log(window.localStorage.getItem('userid'))
 try {
-  let op= await axios.delete(`http://localhost:3001/remove-Cart/${id}`,{
+  let op= await axios.delete(`https://fullstcack-project-4-shoppy-backend.vercel.app/remove-Cart/${id}`,{
     headers:{
       userid:window.localStorage.getItem('userid'),
       auth:window.localStorage.getItem('app-token')

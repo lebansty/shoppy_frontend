@@ -6,7 +6,7 @@ console.log(cartItem)
   let handlePayment =async()=>{
 if(cartItem.length>0){
   try {
-    let stripeCheck= await axios.post('http://localhost:3001/create-checkout-session',cartItem)
+    let stripeCheck= await axios.post('https://fullstcack-project-4-shoppy-backend.vercel.app/create-checkout-session',cartItem)
    console.log(stripeCheck)
     if(stripeCheck.data.url){
       window.location.href=stripeCheck.data.url
