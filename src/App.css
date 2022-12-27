@@ -1,38 +1,148 @@
-.App {
+
+.banner{
+  height: 80px;
+  background-color: cadetblue;
   text-align: center;
+padding-top: 20px;
+}
+.banner h3 a{
+  text-decoration: none;
+  color: beige;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  padding-top: 20px;
+}
+.ProductCard:hover{
+  box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;
+}
+.banner a{
+  text-decoration: none;
+  color: bisque;
+}
+.cartIcon{
+  /* float: right;
+  margin-right: 50px; */
+  font-size: 25px;
+  color:bisque;
+  cursor: pointer;
+  float: right;
+  margin-right: 20px;
+  margin-top: 5px;
+  font-weight: 600;
+}
+.banner span{
+  float: right;
+  margin-right: 20px;
+  margin-top: 5px;
+  font-weight: 600;
+}
+.cart-count{
+  font-size: 12px;
+  background: bisque;
+  color: brown;
+  padding: 0 5px;
+  display: inline;
+  vertical-align: top;
+  border-radius: 50%;
+}
+/* .login{
+  float: right;
+  margin-right: 25px;
+  font-size: 15px;
+  margin-top: 5px;
+  font-weight: 600;
+  
+} */
+
+.login a:hover{
+border-radius: 10px;
+background-color: bisque;
+color: brown;
+}
+.product_update a:hover{
+  border-radius: 10px;
+background-color: bisque;
+color: brown;
+}
+.product_update a{
+padding: 10px;
+}
+.login a{
+  text-decoration: none;
+  color: bisque;
+  padding: 10px;
+}
+.loginPage{
+  
+  height: 100vh;
+  background-color: cadetblue;
+ width: 600px;
+}
+.loginStyle{
+  background-color: cadetblue;
+  border-top-left-radius: 5px;
+  border-bottom-left-radius:5px ;
+ 
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
+.cardBody{
+  display: grid !important;
+  
+  min-height: 500px;
+  grid-template-columns: auto auto auto auto  !important;
+  position: relative;
+  right:222px;
+  top:100px;
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+  border: none !important;
+  box-shadow: rgba(17, 17, 26, 0.1) 0px 4px 16px, rgba(17, 17, 26, 0.1) 0px 8px 24px, rgba(17, 17, 26, 0.1) 0px 16px 56px;
 }
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.item1{
+  background-color: cadetblue;
+grid-column: 1 / span 2;
+  border-top-left-radius: 5px;
+  border-bottom-left-radius:5px ;
 }
-
-.App-link {
-  color: #61dafb;
+.item2{
+  margin-top: 70px;
+  margin-left: 70px;
 }
+.loginBtn{
+  background-color: cadetblue !important;
+  color: beige !important;
+}
+.loginBtn:hover{
+  background-color: darkcyan !important;
+}
+.loginInput:focus{
+border:  1px solid cadetblue !important;
+box-shadow: none !important;
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+}
+.loginInput{
+  -webkit-transition: 0.5s !important;
+  transition: 0.5s !important;
+}
+.formEdit{
+  width: 350px;
+}
+.table{
+  border: 1px solid;
+  border-radius: 5px ;
+  overflow-y:scroll;
+ max-height:445px;
+ display: block;
+   
+}
+.place-btn{
+  background-color: cadetblue;
+  border: 0;
+  color: beige;
+  font-weight: 600 !important;
+}
+.place-btn:hover{
+  background: #18B6A0 !important;
+}
+.pay-icon{
+  font-size: 40px;
+  color: #18B6A0;
 }
