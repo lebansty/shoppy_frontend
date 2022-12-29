@@ -42,7 +42,7 @@ navigate("/login")
   return (
     <>
       <nav className='banner'>
-        <h3 style={{ display: "inline" }}><Link to={'/'}>Sneak</Link></h3><Link to={'/cart-item'} className='cartIcon'><FontAwesomeIcon icon={faShoppingCart} /><div className='cart-count'>{cartLength?cartLength:0}</div></Link><span className='login'>{!admin && !user ?<Link to={"/login"}>Login/Signup</Link>:<span onClick={logOut}>Logout </span>}</span>{admin?<span className='product_update'><Link to={"/products"}>Update Products</Link></span>:null}
+        <h3 style={{ display: "inline" }}><Link to={'/'}>Sneak</Link></h3><Link to={'/cart-item'} className='cartIcon'><FontAwesomeIcon icon={faShoppingCart} /><div className='cart-count'>{cartLength?cartLength:0}</div></Link><span className='login'>{!admin && !user ?<Link to={"/login"}>Login/Signup</Link>:admin||user?<span onClick={logOut}>Logout </span>:null}</span>{admin?<span className='product_update'><Link to={"/products"}>Update Products</Link></span>:null}
       </nav>
       <Outlet />
     </>
