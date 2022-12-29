@@ -146,3 +146,13 @@ box-shadow: none !important;
   font-size: 40px;
   color: #18B6A0;
 }
+.logout-btn{
+  color: bisque;
+  padding: 10px;
+  cursor: pointer;
+}
+.logout-btn:hover{
+  border-radius: 10px;
+  background-color: bisque;
+  color: brown;
+}
